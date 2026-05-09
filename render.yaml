@@ -1,0 +1,31 @@
+# Eesha Search — Render.com Blueprint
+# SearXNG Meta-Search Engine — Aggregates 70+ search engines
+#
+# API Endpoints:
+#   Search (JSON): https://eesha-search.onrender.com/search?q=...&format=json
+#   Suggestions:   https://eesha-search.onrender.com/autocompleter?q=...
+#   Web UI:        https://eesha-search.onrender.com/search?q=...
+#   Health:        https://eesha-search.onrender.com/healthz
+
+services:
+  - type: web
+    name: eesha-search
+    runtime: docker
+    plan: free
+    dockerContext: search-engine/searxng-render
+    dockerfilePath: search-engine/searxng-render/Dockerfile
+    envVars:
+      - key: SEARXNG_BASE_URL
+        value: "https://eesha-search.onrender.com"
+      - key: SEARXNG_SECRET
+        generateValue: true
+      # Render's port (must match what SearXNG listens on)
+      - key: PORT
+        value: "10000"
+      # SearXNG's granian server reads SEARXNG_PORT (overrides GRANIAN_PORT=8080)
+      # The entrypoint.sh does: export GRANIAN_PORT="${SEARXNG_PORT:-$GRANIAN_PORT}"
+      - key: SEARXNG_PORT
+        value: "10000"
+    healthCheckPath: /healthz
+    # Free tier: service spins down after 15 min inactivity
+    # It will spin back up on next request (cold start ~30s)
