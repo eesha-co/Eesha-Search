@@ -22,7 +22,21 @@
 }
 
 /* ─── Search Header Logo ─── */
-/* Style the Eesha logo text in search results page */
+/* Style the Eesha logo image in search results page */
+#search_logo .eesha-logo-img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+#search_logo:hover .eesha-logo-img {
+  opacity: 0.85;
+}
+
+/* Keep old text style as fallback (hidden when image loads) */
 #search_logo .eesha-logo-text {
   font-size: 1.8rem;
   font-weight: 800;
@@ -34,18 +48,6 @@
   gap: 0.4rem;
   text-decoration: none;
   line-height: 1;
-}
-
-#search_logo .eesha-logo-text::before {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-image: url('../img/favicon.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 6px;
 }
 
 /* ─── Homepage title ─── */
@@ -60,15 +62,11 @@
   letter-spacing: -0.02em;
 }
 
-.index .title h1::before {
-  content: '';
-  display: inline-block;
+.index .title h1 .eesha-home-logo {
   width: 48px;
   height: 48px;
-  background-image: url('../img/searxng.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 /* ─── Header search bar accent ─── */

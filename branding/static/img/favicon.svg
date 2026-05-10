@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#0d9488"/>
-  <path d="M20 18h18c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H24v4h12c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H24v6h14c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H20c-2.2 0-4-1.8-4-4V22c0-2.2 1.8-4 4-4z" fill="white"/>
-  <circle cx="44" cy="44" r="8" stroke="white" stroke-width="3" fill="none"/>
-  <line x1="49.5" y1="49.5" x2="54" y2="54" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="white"/>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="#0d9488" opacity="0.08"/>
+  <!-- Eesha "E" letterform -->
+  <path d="M20 18h18c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H24v4h12c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H24v6h14c2.2 0 4 1.8 4 4v2c0 2.2-1.8 4-4 4H20c-2.2 0-4-1.8-4-4V22c0-2.2 1.8-4 4-4z" fill="#0d9488"/>
+  <!-- Search magnifying glass -->
+  <circle cx="44" cy="44" r="8" stroke="#0d9488" stroke-width="3" fill="none"/>
+  <line x1="49.5" y1="49.5" x2="54" y2="54" stroke="#0d9488" stroke-width="3" stroke-linecap="round"/>
 </svg>
